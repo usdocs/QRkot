@@ -1,12 +1,12 @@
 # QRkot_spreadseets
-[![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=56C0C0&color=008080)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/-FastAPI-464646?style=flat&logo=FastAPI&&logoColor=56C0C0&color=008080)](https://fastapi.tiangolo.com/)
-[![SQLAlchemy](https://img.shields.io/badge/-SQLAlchemy-464646?style=flat&logo=SQLAlchemy&logoColor=56C0C0&color=008080)](https://www.sqlalchemy.org/)
-[![Alembic](https://img.shields.io/badge/-Alembic-464646?style=flat&logo=Alembic&logoColor=56C0C0&color=008080)](https://alembic.sqlalchemy.org/en/latest/)
-[![Uvicorn](https://img.shields.io/badge/-Uvicorn-464646?style=flat&logo=Uvicorn&logoColor=56C0C0&color=008080)](https://www.uvicorn.org/)
-[![Pydantic](https://img.shields.io/badge/-Pydantic-464646?style=flat&logo=Pydantic&logoColor=56C0C0&color=008080)](https://docs.pydantic.dev/latest/)
-[![FastAPI_Users](https://img.shields.io/badge/-FastAPI_Users-464646?style=flat&logo=FastAPI_Users&logoColor=56C0C0&color=008080)](https://fastapi-users.github.io/fastapi-users/10.0/)
-[![aiogoogle](https://img.shields.io/badge/-aiogoogle-464646?style=flat&logo=aiogoogle&logoColor=56C0C0&color=008080)](https://aiogoogle.readthedocs.io/en/latest/)
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=ffffff&color=5fe620)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/-FastAPI-464646?style=flat&logo=FastAPI&&logoColor=ffffff&color=5fe620)](https://fastapi.tiangolo.com/)
+[![SQLAlchemy](https://img.shields.io/badge/-SQLAlchemy-464646?style=flat&logo=SQLAlchemy&logoColor=ffffff&color=5fe620)](https://www.sqlalchemy.org/)
+[![Alembic](https://img.shields.io/badge/-Alembic-464646?style=flat&logo=Alembic&logoColor=ffffff&color=5fe620)](https://alembic.sqlalchemy.org/en/latest/)
+[![Uvicorn](https://img.shields.io/badge/-Uvicorn-464646?style=flat&logo=Uvicorn&logoColor=ffffff&color=5fe620)](https://www.uvicorn.org/)
+[![Pydantic](https://img.shields.io/badge/-Pydantic-464646?style=flat&logo=Pydantic&logoColor=ffffff&color=5fe620)](https://docs.pydantic.dev/latest/)
+[![FastAPI_Users](https://img.shields.io/badge/-FastAPI_Users-464646?style=flat&logo=FastAPI_Users&logoColor=ffffff&color=5fe620)](https://fastapi-users.github.io/fastapi-users/10.0/)
+[![aiogoogle](https://img.shields.io/badge/-aiogoogle-464646?style=flat&logo=aiogoogle&logoColor=ffffff&color=5fe620)](https://aiogoogle.readthedocs.io/en/latest/)
 
 
 
@@ -33,30 +33,40 @@
 ## Как запустить проект:
 Клонировать репозиторий и перейти в него в командной строке:
 
-```
-git@github.com:usdocs/QRkot_spreadsheets.git
-```
-
-```
-cd cat_charity_fund
+```bash
+git clone git@github.com:usdocs/QRkot.git
+cd QRkot
 ```
 
 Создать и активировать виртуальное окружение:
-```
-python -m venv env
-```
-
-```
+```bash
+python -m venv venv
 source venv/Scripts/activate
 ```
 
 Обновить менеджер пакетов pip:
-```
+```bash
 python -m pip install --upgrade pip
 ```
+
 Установить зависимости из файла requirements.txt:
-```
+```bash
 pip install -r requirements.txt
 ```
+
+Выполнить миграции:
+```bash
+alembic upgrade head
+```
+
+Запустить проект:
+```bash
+uvicorn app.main:app
+```
+
+#### Полный список запросов API находятся в документации
+
+Ознакомиться с полным функционалом и примерами можно по эндпоинту http://127.0.0.1:8000/redoc
+
 
 Автор: [Балакин Андрей](https://github.com/usdocs)

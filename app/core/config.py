@@ -28,6 +28,6 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-#Constants
+# Constants
 LIFETIME_SECONDS = 3600
 MIN_LEN_PASSWORD = 3
